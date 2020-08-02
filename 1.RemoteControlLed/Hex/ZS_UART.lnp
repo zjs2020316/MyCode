@@ -1,0 +1,19 @@
+--cpu=Cortex-M4.fp
+"..\hex\system_stm32f4xx.o"
+"..\hex\startup_stm32f429_439xx.o"
+"..\hex\misc.o"
+"..\hex\stm32f4xx_gpio.o"
+"..\hex\stm32f4xx_rcc.o"
+"..\hex\stm32f4xx_usart.o"
+"..\hex\main.o"
+"..\hex\stm32f4xx_it.o"
+"..\hex\zs_globalvariable.o"
+"..\hex\zs_esp8266.o"
+"..\hex\zs_key.o"
+"..\hex\zs_led.o"
+"..\hex\zs_spc.o"
+"..\hex\zs_systick.o"
+--library_type=microlib --strict --scatter "..\Hex\ZS_UART.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "..\Listing\ZS_UART.map" -o ..\Hex\ZS_UART.axf
